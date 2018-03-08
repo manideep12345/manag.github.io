@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script>
+function func(){
+alert("sorry,no rooms available right now!!");
+}
+function place()
+{
+alert("Your order has been placed successfully!!");
+}
+function sub(){
+var a=document.getElementById("fname").value;
+var x=document.getElementById("email").value;
+var b=document.getElementById("textarea").value;
+var y=document.getElementById("email");
+var i,a=0;
+if(a==""||b==""||x==""){
+    alert("please do enter all feilds!!!");
+   }
+if(a!=""||b!=""||x!=""){
+ for(i=0;i<x.length;i++)
+   {
+      if(x[i]=='@')
+         {a++;
+           alert("sucessfully submitted!!");
+           y.focus();
+          y.style.border="";
+            break;}
+    }
+if(a==0)
+  {
+    alert("enter your email properly!!");
+     y.focus();
+    y.style.border="2px solid red";
+   }
+document.getElementById("fname").value="";
+document.getElementById("email").value="";
+document.getElementById("textarea").value="";
+}
+
+}
+
+</script>
+
+
+
+<style>
+body{
+margin:0px;
+height:100%;
+padding:0px;
+width:100%;
+}
+
+.img{
+width:100%;
+height:90%;
+position:absolute;
+top:0px;
+left:0px;
+z-index:-2;
+}
+
+#header{
+width:100%;
+background-color:rgba(0,0,0,1);
+height:80px;
+margin:0px;
+position:fixed;
+top:0px;
+line-height:50px;
+z-index:1;
+}
+
+#header ul{
+list-style:none;
+}
+
+#header ul li{
+
+float:right;
+display:inline-block;
+padding:10px;
+padding-top:2px;
+margin-right:30px;
+font-size:24px;
+color:white;
+margin-top:0px;
+}
+
+#header ul li:hover{
+opacity:0.3;
+padding:2px;
+}
+
+#login{
+
+padding:20px;
+position:absolute;
+top:100px;
+right:5px;
+height:60%;
+}
+
+#login table
+{
+
+border:2px solid black;
+padding:15px;
+background-color:rgba(135,206,235,0.4);
+}
+td{padding:3px;
+}
+#login .center
+{
+text-align:center;
+}
+#login .left
+{
+text-align:left;
+}
+#login .right
+{
+text-align:right;
+}
+
+
+
+
+.iorder{
+position:absolute;
+top:90%;
+height:80%;
+width:100%;
+z-index:-2;
+opacity:0.9;
+}
+
+
+
+#order{
+
+height:80%;
+position:absolute;
+top:90%;
+width:100%;
+}
+#order table{
+float:right;
+margin-right:120px;
+border:2px solid black;
+padding:15px;
+background-color:rgba(176,196,222,0.6);
+height:25%;
+width:25%;
+}
+
+
+#order td{
+text-align:left;
+padding:5px;
+}
+
+.left
+{
+text-align:left;
+}
+.right
+{
+text-align:right;
+}
+
+.sub{
+text-align:center;
+height:30px;
+padding:15px;
+border-radius:2px;
+}
+
+#content{
+position:absolute;
+top:170%;
+height:50%;
+padding:10px;
+background-color:rgba(255,248,220,1);
+color:rgb(30,144,255);
+}
+
+#content h1{
+color:black;
+}
+
+.fluid{
+position:fixed;
+opacity:0.7;
+z-index:-3;
+width:100%;
+height:100%;
+}
+
+#hotel{
+position:absolute;
+top:220%;
+height:50%;
+width:100%;
+
+}
+
+#hotelp{
+padding:20px;
+padding-top:0px;
+line-height:25px;
+font-size:20px;
+color:rgb(25,25,112);
+}
+
+#hotelbutt{
+border-radius:10px;
+padding:10px;
+}
+
+#hotelbutt:hover{
+background-color:black;
+color:white;
+}
+
+p#hotelp::first-letter{
+font-size:50px;
+font-style:helvatica;
+}
+
+#comment{
+background-color:rgb(192,192,192);
+position:absolute;
+top:270%;
+height:60%;
+width:100%;
+}
+#address{
+padding:20px;
+float:left;
+}
+
+#comt{
+float:right;
+margin-right:250px;
+}
+
+#comt td{
+padding:4px;
+}
+
+#footer{
+background-color:black;
+color:white;
+position:absolute;
+line-height:40px;
+top:330%;
+height:10%;
+width:100%;
+}
+input[type=text]{
+padding:3px;
+color:blue;
+
+}
+
+input[type=email]{
+padding:3px;
+}
+
+input[type=password]
+{
+padding:3px;
+}
+
+
+</style>
+</head>
+
+<body>
+<div id="header">
+<h1 style="color:white;width:600px;float:left;padding:15px;padding-top:5px;font-family:Andale Mono,Monospace;">HOTEL MANAG<sub style="font-size:16px"><i> &nbsp-We serve the Ultimate</i></sub></h1>
+
+  <ul>
+     <a href="#comment"><li>Contact</li></a>
+     <a href="#order"><li>Order</li></a>
+     <a href="#hotel"><li>Rooms</li></a>
+     <a href="#login"><li>Home</li></a>
+  </ul>
+</div>
+
+<div id="login">
+<table>
+<tr>
+<th colspan="3" style="text-align:center;font-size:150%" id="uuj">Login</th>
+</tr>
+<tr></tr>
+<tr></tr>
+<tr>
+<td class="left">Username</td><td class="center">:</td>
+<td class="left"><input type="text" name="username" id="fname"></td>
+</tr>
+<tr>
+<td class="left">Password</td><td class="center">:</td>
+<td class="left"><input type="password" name="password" id="fpassword"></td>
+</tr>
+<tr>
+<td class="center" colspan="3"><input type="submit" value="Login"></td>
+</tr>
+<tr>
+<td class="center" colspan="3"><br><a style="color:white" href="https://www.youtube.com/">New User?</a><br></td>
+</tr>
+<tr>
+<td class="center" colspan="3"><a style="color:white" href="https://www.facebook.com/">Forgot Password?</a></td>
+</tr>
+</table>
+</div>
+
+
+<img class='img' src='wpid-1180178.jpg'>
+<img class="iorder" src="bigstock-Hand-Holding-Mobile-With-Order-173691488.jpg">
+
+<div id="order">
+
+<h1 name="order" style="padding:10px;font-family:Helvetica;padding-bottom:0px;margin-bottom:0px;"><center>PLACE YOUR ORDER</center></h1>
+<marquee><p style="color:rgb(0,0,139);font-size:27px;padding-top:0px;margin-top:0px;">Delivery in 30 mins!!!</p></marquee>
+
+
+<table>
+
+
+<tr><th colspan="3" ><h1>Home Delivery</h1></th></tr>
+
+<tr>
+<td class="left">Name:</td><td class="center">:</td>
+<td class="left"><input type="text" name="name" placeholder="Name"></td>
+</tr>
+<tr>
+<td class="left">E-Mail</td><td class="center">:</td>
+<td class="left"><input type="email" name="email" placeholder="E-Mail"></td>
+</tr>
+<tr>
+<td class="left">Mobile No</td><td class="center">:</td>
+<td class="left"><input type="tel" name="number" placeholder="0000000000"></td>
+</tr>
+<tr>
+<td class="left">Address</td><td class="center">:</td>
+<td class="left"><input type="text" name="address" placeholder="Address"></td>
+</tr>
+<tr>
+<td class="left">Item</td><td class="center">:</td>
+<td class="left">
+<select>
+<option value="">--Select--</option>
+<option value="Idli">Idli</option>
+<option value="Dosa">Dosa</option>
+<option value="Vada">Vada</option>
+<option value="Puri">Puri</option>
+<option value="Chapathi">Chapathi</option>
+</select>
+</td>
+</tr>
+<tr>
+<td class="left">Quantity</td><td class="center">:</td>
+<td class="left">
+<input type="number" name="number">
+</td>
+</tr>
+<tr>
+<td colspan="3" class="sub"><button onclick="place()" id="hotelbutt">Place Order</button></td>
+</tr>
+</table>
+
+</center>
+</div>
+<div id="content">
+<hr>
+<h1 style="padding:10px;font-family:Helvetica"><center>Welcome To Hotel MANAG </center></h1><hr>
+<div id="add">
+<p style="padding:30px;padding-top:0px;font-size:20px;line-height:25px;"> <i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHotel manag is a warm and friendly Indian hotel, offering personalized yet world-class service backed by over 5 years of experience in serving our customers. The word ‘manag’ literally means Heaven. Thus, our customers will find the management engaged in a persistent effort to combine world-class skills mastered in various parts of the world. 
+We are one of the best hotels In Indore. We offer luxury accommodation in Indore with degree of uniqueness and individuality that is unparalleled, and you can rest assured of consistently enjoying the standards of friendly and efficient service for which the Hotel has become renowned. Escape from the stress of daily routine and retreat to the peace and tranquility of Hotel manag. The 24 luxurious rooms including Spacious executive Suites are fine example of of elegance and sophisticated style. The computerized communication system ensures efficiency and confidentiality. With its legendary and excellent facilities.
+</i></p>
+</div>
+</div>
+
+<div id="hotel">
+<center><h1 name="hotel" style="padding:15px">About Accomodation</h1><center>
+<p id="hotelp"><i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHotel Manag is a warm and friendly Indian hotel, offering personalized yet world-class service backed by over 5 years of experience in serving our customers. The word ‘Manag’ literally means Heaven. Thus, our customers will find the management engaged in a persistent effort to combine world-class skills mastered in various parts of the world. 
+We are one of the best hotels In Indore. We offer luxury accommodation in Indore with degree of uniqueness and individuality that is unparalleled, and you can rest assured of consistently enjoying the standards of friendly and efficient service for which the Hotel has become renowned. Escape from the stress of daily routine and retreat to the peace and tranquility of Hotel Manag. The 24 luxurious rooms including Spacious executive Suites are fine example of of elegance and sophisticated style. The computerized communication system ensures efficiency and confidentiality. With its legendary and excellent facilities.
+</i></p>
+<center><button id="hotelbutt" onclick="func()">BOOK ROOMS</button></center>
+</div>
+<img class="fluid" src="banner52.jpg">
+
+
+<div id="comment">
+<div id="address">
+    <h1> ADDRESS:</h1>
+  <pre><h2>      HOTEL MANAG
+      Regional Telecom Training Centre(RTTC)
+      BSNL,Near TV Tower
+      Beside Balaji Temple
+      Seminary Hills
+      Maharastra 
+      440006
+      Contact:1234567890</h2>
+  </pre>
+</div>
+
+<div id="comt">
+<table>
+<tr><td><h1>Leave a suggestion:</h1></td></tr>
+<tr><td><input type="text" placeholder="NAME" id="fname" style="width:400px"></td></tr>
+<tr><td><input type="email" placeholder="EMAIL" name="email" id="email" style="width:400px"></td></tr>
+<tr><td><textarea id="textarea" rows="8" cols="70"></textarea></td></tr>
+<tr><td><input onclick="sub()" id="hotelbutt" type="submit" value="Submit"></td></tr>
+
+</table>
+</div>
+</div>
+
+
+
+<div id="footer">
+<a href="https://www.facebook.com/"><img style="float:right;padding:15px;padding-right:0px;margin-left:2px;cursor:pointer;margin-right:40px;margin-bottom:3px;" src="downloads.png"></a>
+<a href="https://www.instagram.com/?hl=en"><img style="float:right;padding:15px;padding-right:0px;margin-right:2px;cursor:pointer;margin-bottom:3px;" src="imgonline-com-ua-resize-IrsjXjKQHZnIz2Y.png"></a>
+<a href="https://twitter.com/login?lang=en"><img style="float:right;padding:15px;padding-right:0px;margin-right:2px;cursor:pointer;margin-bottom:3px;" src="imgonline-com-ua-resize-kZ2ercwZqOd.png"></a>
+
+<center><p style="margin-left:20%;">&copy;MANAG creative works limited.</p></center>
+
+
+
+</div>
+
+
+</body>
+</html>
